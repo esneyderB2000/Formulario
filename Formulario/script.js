@@ -40,7 +40,7 @@ function guardar() {
 
 
 function consulta(){
-    window.location.href = "/Consulta/consulta.html";
+    window.location.href = "/Formulario/Consulta/consulta.html";
 }
 
 
@@ -63,7 +63,7 @@ function validarFormulario() {
             allowOutsideClick: false
         }).then((result) => {
             if (result.value) {
-                window.location.href = "/Formulario/formulario.html";
+                window.location.href = "/Formulario/Formulario/formulario.html";
             }
         });
 
