@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <form autocomplete="off" id="Forms" class="formulario">
+        <h2 class="create-account">Registrar Puntos de factura</h2>
+        <input type="text" placeholder="Nombre Cliente">
+        <input type="number" placeholder="Telefono">
+        <input type="text" placeholder="Direccion">
+        <input type="number" placeholder="Numero Factura">
+        <input type="number" placeholder="Valor Total de Factura">
+        <input onclick="guardar()" type="button" value="Guardar">
+        <input onclick="consulta()" type="button" value="Consultar">
+    </form>
+
+    <script src="/script.js"></script>
+</body>
+</html>
