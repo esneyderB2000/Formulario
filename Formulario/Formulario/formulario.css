@@ -32,12 +32,12 @@ body {
     margin-bottom: 2rem;
     background-color: transparent;
     border: none;
-    border-bottom: white thin solid;
+    border-bottom: red thin solid;
     text-align: center;
     outline: none;
     padding: .2rem 0;
     font-size: .9rem;
-    color: white;
+    color: red;
 }
 
 .formulario input[type="button"] {
@@ -46,13 +46,13 @@ body {
     border: solid thin white;
     padding: .7rem;
     border-radius: 2rem;
-    background-color: white;
+    background-color: #C40C2E;
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: .8rem;
     cursor: pointer;
-    color: #222;
+    color: white;
 }
 
 .create-account {
