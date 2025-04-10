@@ -10,11 +10,11 @@
 <body>
     <form autocomplete="off" id="Forms" class="formulario" netlify>
         <h2 class="create-account">Registrar Puntos de Factura</h2>
-        <input type="text" placeholder="Nombre Cliente">
-        <input type="number" placeholder="Telefono">
-        <input type="text" placeholder="Direccion">
-        <input type="number" placeholder="Numero Factura">
-        <input type="number" placeholder="Valor Total de Factura">
+        <input name="nombre" type="text" placeholder="Nombre Cliente">
+        <input name="telefono" type="number" placeholder="Telefono">
+        <input name="direccion" type="text" placeholder="Direccion">
+        <input name="numFactura" type="number" placeholder="Numero Factura">
+        <input name="valorTotal" type="number" placeholder="Valor Total de Factura">
         <input onclick="guardar()" type="submit" value="Guardar">
         <input onclick="consulta()" type="button" value="Consultar">
     </form>
