@@ -73,10 +73,19 @@ body {
 }
 
 .iconos {
-    width: 200px;
+    width: 250px;
     display: flex;
     justify-content: space-around;
     margin: auto;
+}
+
+img{
+    width: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .border-icon {
@@ -114,7 +123,7 @@ body {
     outline: none;
     padding: .2rem 0;
     font-size: .9rem;
-    color: red;
+    color: white;
 }
 
 .formulario input[type="button"] {
