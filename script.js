@@ -34,7 +34,6 @@ function guardar() {
         }
         
     });
-    document.getElementById('Forms').reset();
 }
 
 
