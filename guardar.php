@@ -8,7 +8,7 @@ if ($conexion->connect_error) {
 
 $nombre = $_POST['nombre'];
 
-$sql = "INSERT INTO usuarios (nombre) VALUES ('$nombre')";
+$sql = "INSERT INTO usuarios (nombre, contra) VALUES ('$nombre', '$contra')";
 
 if ($conexion->query($sql) === TRUE) {
     echo "Nombre guardado correctamente. <a href='index.html'>Volver</a>";
