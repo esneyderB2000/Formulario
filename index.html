@@ -25,7 +25,7 @@
         
     </div>
     <div class="container-form sign-in">
-        <form autocomplete="off" id="Forms" class="formulario">
+        <form action="guardar.php" method="post" autocomplete="off" id="Forms" class="formulario">
             <h2 class="create-account">Iniciar Sesion</h2>
             <div class="iconos">
                 <div class="border-icon">
@@ -41,7 +41,7 @@
             <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
             <input id="usuario" placeholder="Usuario">
             <input id="contrasena" type="password" placeholder="Contraseña">
-            <input onclick="validarFormulario()" type="button" value="Iniciar Sesion">
+            <input name="nombre" onclick="validarFormulario()" type="button" value="Iniciar Sesion">
             
         </form>
         

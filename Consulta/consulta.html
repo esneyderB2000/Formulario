@@ -10,6 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+
+
 </head>
 <body>
 
@@ -20,7 +28,7 @@
                 <h2>Realizar Consulta</h2><br>
                 <p>Digita un Numero de Factura Valido</p><br><br>
                 <input type="number" placeholder="Numero de Factura">
-                <button class="sign-up-btn">Consultar</button>
+                <button class="sign-up-btn" onclick="consultar()">Consultar</button>
             </div>
         </div>
     </div>
@@ -30,13 +38,15 @@
         <div class="container-form sign-in">
             <form autocomplete="off" class="formulario">
                 <h2 class="create-account">Consulta Realizada</h2>
-                <input type="text" placeholder="Nombre Cliente">
-                <input type="number" placeholder="Telefono">
-                <input type="text" placeholder="Direccion">
-                <input type="number" placeholder="Numero Factura">
-                <input type="number" placeholder="Valor Total de Factura">
-                <a href="formulario.html"><button>Regresar a Consulta</button></a>
-                <a href="/index.html"><button>Regresar al Principio</button></a>
+                <input id="name" type="text" placeholder="Nombre Cliente">
+                <input id="tel" type="number" placeholder="Telefono">
+                <input id="direccion" type="text" placeholder="Direccion">
+                <input id="factura" type="number" placeholder="Numero Factura">
+                <input id="valor" type="number" placeholder="Valor Total de Factura">
+                <button type="button" onclick="guardarFactura()">Guardar</button>
+                <button type="button" onclick="consultar()">Consultar</button>
+                <a href="formulario.html"><button type="button">Regresar a Consulta</button></a>
+                <a href="/index.html"><button type="button">Regresar al Principio</button></a>
                 <div class="iconos">
                     <div class="border-icon">
                         <i class='bx bx-file-find'></i>

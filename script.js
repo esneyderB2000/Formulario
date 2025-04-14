@@ -10,7 +10,43 @@ document.addEventListener('click', e => {
     }
 });
 
+function guardarFactura() {
+    const cliente = {
+        nombre: document.getElementById('name').value,
+        telefono: document.getElementById('tel').value,
+        direccion: document.getElementById('direccion').value,
+        factura: document.getElementById('factura').value,
+        valor: document.getElementById('valor').value
+    };
 
+    if (cliente.factura) {
+        localStorage.setItem(cliente.factura, JSON.stringify(cliente));
+        alert("Datos guardados correctamente.");
+        exportarAExcel();
+    } else {
+        alert("Por favor, ingresa un número de factura.");
+    }
+}
+
+// Consulta los datos por número de factura
+function consultar() {
+    const factura = prompt("Ingrese el número de factura a consultar:");
+
+    if (factura) {
+        const datos = localStorage.getItem(factura);
+
+        if (datos) {
+            const cliente = JSON.parse(datos);
+            document.getElementById('name').value = cliente.nombre;
+            document.getElementById('tel').value = cliente.telefono;
+            document.getElementById('direccion').value = cliente.direccion;
+            document.getElementById('factura').value = cliente.factura;
+            document.getElementById('valor').value = cliente.valor;
+        } else {
+            alert("No se encontraron datos para esa factura.");
+        }
+    }
+}
 
 
 
@@ -93,4 +129,26 @@ function validarFormulario() {
         });
         document.getElementById('Forms').reset();
     }
+}
+
+
+
+
+
+function exportarAExcel() {
+    // 1. Recolectar todos los datos desde localStorage
+    const datos = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const item = JSON.parse(localStorage.getItem(key));
+        datos.push(item);
+    }
+
+    // 2. Convertir datos a una hoja Excel
+    const ws = XLSX.utils.json_to_sheet(datos);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Clientes");
+
+    // 3. Descargar el archivo Excel
+    XLSX.writeFile(wb, "clientes.xlsx");
 }
