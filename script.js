@@ -134,7 +134,7 @@ function validarFormulario() {
 
 
 
-
+/*
 function exportarAExcel() {
     // 1. Recolectar todos los datos desde localStorage
     const datos = [];
@@ -151,4 +151,4 @@ function exportarAExcel() {
 
     // 3. Descargar el archivo Excel
     XLSX.writeFile(wb, "clientes.xlsx");
-}
+}*/
